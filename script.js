@@ -7,7 +7,6 @@ function buscarPalabras() {
         resultado += arguments[i];
     }
 
-    console.log(resultado);
     return resultado.concat('%29');
 }
 
