@@ -1,12 +1,11 @@
-function buscarPalabras() {
+const buscarPalabras = (...strings) => {
     let resultado = '%20%28';
-    for (let i = 0; i < arguments.length; i++) {
+    for (let i = 0; i < strings.length; i++) {
         if (resultado !== '%20%28') {
             resultado += '%20OR%20';
         }
-        resultado += arguments[i];
+        resultado += strings[i];
     }
-
     return resultado.concat('%29');
 }
 
