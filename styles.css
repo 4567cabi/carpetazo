@@ -11,7 +11,7 @@ body {
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 40px;
     margin-bottom: 10px;
 }
 
@@ -48,4 +48,11 @@ button {
 
 button:hover {
     background-color: #2980b9;
+}
+
+#optionError {
+    font-size: 20px;
+    padding-top: 10px;
+    color: grey;
+    display: none;
 }
