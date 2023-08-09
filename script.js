@@ -8,6 +8,11 @@ const buscarPalabras = (...strings) => {
     }
     return resultado.concat('%29');
 }
+const resetError = () => {
+    setTimeout(() => {
+        optionError.innerHTML = '';
+    }, 2500);
+}
 
 function buscarTweets() {
     const twitterUsername = document.getElementById('twitterUsername').value
@@ -34,24 +39,14 @@ function buscarTweets() {
             window.open(searchQuery, '_blank')
         } else if (opcion.value == "seleccione") {
             optionError.innerHTML = 'Ingrese una opción válida!!!';
-            optionError.style.display = "block";
-
-            // reiniciamos el texto luego de 2 segundos
-            setTimeout(() => {
-                optionError.innerHTML = '';
-                divCopiar.style.display = "none";
-            }, 2000);
+            resetError();
         }
     } else {
         optionError.innerHTML = 'Ingrese un usuario valido!!!';
-        optionError.style.display = "block";
-        // reiniciamos el texto
-        setTimeout(() => {
-            optionError.innerHTML = '';
-            divCopiar.style.display = "none";
-        }, 3000);
+        resetError();
     }
-
 }
+
+
 
 
